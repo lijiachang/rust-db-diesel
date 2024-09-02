@@ -1,6 +1,17 @@
 [package]
 name = "rust-db-diesel"
 version = "0.1.0"
+authors = ["lijiachang"]
 edition = "2021"
 
 [dependencies]
+diesel = { version = "2.2.3", features = ["postgres"] }
+dotenv = "0.15.0"
+
+[lib]
+name = "rust_db_diesel"
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.22.2"
+features = ["extension-module"]
